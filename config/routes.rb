@@ -10,4 +10,5 @@ Rails.application.routes.draw do
   # root "posts#index"
 
   root to: "homes#index"
+  resources :lessons, only: [:index, :new]
 end
