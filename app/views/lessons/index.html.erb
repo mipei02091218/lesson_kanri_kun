@@ -3,4 +3,7 @@
     <%= render "homes/side_bar" %>
   </div>
   <div class="main-contents">
+    <%= month_calendar do |date| %>
+      <%= date.day %>
+    <% end %>
   </div>
