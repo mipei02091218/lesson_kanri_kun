@@ -3,7 +3,17 @@
     <%= render "homes/side_bar" %>
   </div>
   <div class="main-contents">
-    <%= month_calendar do |date| %>
+    <%= link_to 'レッスン日時を登録する', new_lesson_path %>
+
+    <%= month_calendar(events: @lessons, ) do |date, lessons| %>
       <%= date.day %>
+      
+      <% lessons.each do |lesson| %>
+        <div>
+          <%= link_to lesson.start_time.strftime("%Y-%m-%d %H:%M") %>
+        </div>
+      <% end %>
     <% end %>
   </div>
+
+  
