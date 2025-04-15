@@ -35,7 +35,6 @@ belongs_to: lesson
 | Colum      | Type       | Options                        |
 |------------|------------|--------------------------------|
 | teacher    | references | null: false, foreign_key: true |
-| date       | date       | null: false                    |
 | start_time | integer    | null: false                    |
 
 ### Association
