@@ -10,7 +10,7 @@
       
       <% lessons.each do |lesson| %>
         <div>
-          <%= link_to lesson.start_time.strftime("%Y-%m-%d %H:%M") %>
+          <%= link_to lesson.start_time.strftime("%H:%M") %>
         </div>
       <% end %>
     <% end %>
