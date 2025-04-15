@@ -10,7 +10,17 @@ class LessonsController < ApplicationController
 
   def create
     Lesson.create(lesson_parameter)
-    redirect_to root_path
+    redirect_to lessons_path
+  end
+
+  def edit
+    @lesson = Lesson.find(params[:id])
+  end
+
+  def update
+    lesson = Lesson.find(params[:id])
+    lesson.update(lesson_parameter)
+    redirect_to lessons_path
   end
 
   private

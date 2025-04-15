@@ -10,5 +10,5 @@ Rails.application.routes.draw do
   # root "posts#index"
   devise_for :users
   root to: "homes#index"
-  resources :lessons, only: [:index, :new, :create]
+  resources :lessons, only: [:index, :new, :create, :edit, :update]
 end
